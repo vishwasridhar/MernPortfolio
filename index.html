@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <title>Home | Portfolio</title>
+    <meta
+      name="description"
+      content="Welcome to Portfolio. A modern, accessible portfolio built with plain HTML, CSS and JavaScript."
+    />
+    <meta name="color-scheme" content="dark light" />
+    <meta name="theme-color" content="#0a0a0a" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Portfolio" />
+    <meta property="og:description" content="Design engineer & AI enthusiast. Selected work and case studies." />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%238F002B'/%3E%3Cpath d='M8 12h16M8 16h16M8 20h12' stroke='white' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E"
+    />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..600&family=Geist:wght@400..700&family=Geist+Mono:wght@400..600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Apply saved / system theme before first paint (prevents a flash) -->
+    <script>
+      (function () {
+        try {
+          var saved = localStorage.getItem("theme");
+          var dark = saved ? saved === "dark" : true; // dark-first premium look
+          if (dark) document.documentElement.classList.add("dark");
+        } catch (e) {}
+      })();
+    </script>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <a href="#main-content" class="skip-to-content" id="skip-link">Skip to main content</a>
+
+    <!-- Decorative page frame -->
+    <div class="site-frame site-frame--top" aria-hidden="true"></div>
+    <div class="site-frame site-frame--left" aria-hidden="true"></div>
+    <div class="site-frame site-frame--right" aria-hidden="true"></div>
+    <svg class="site-corner site-corner--top-left" width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true">
+      <path d="M5.50871e-06 0C-0.00788227 37.3001 8.99616 50.0116 50 50H5.50871e-06V0Z" fill="currentColor" />
+    </svg>
+    <svg class="site-corner site-corner--top-right" width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true">
+      <path d="M5.50871e-06 0C-0.00788227 37.3001 8.99616 50.0116 50 50H5.50871e-06V0Z" fill="currentColor" />
+    </svg>
+
+    <!-- Animated shader backdrop -->
+    <div class="backdrop" aria-hidden="true">
+      <div class="backdrop__inner" id="backdrop-shader"></div>
+    </div>
+
+    <!-- Primary navigation -->
+    <nav class="nav" aria-label="Primary">
+      <div class="nav__bar">
+        <ul class="nav__list" id="nav-list">
+          <span class="nav__pill" id="nav-pill" aria-hidden="true"></span>
+          <li><a class="nav__link focus-ring" href="#/" data-route="home"><span>Home</span></a></li>
+          <li><a class="nav__link focus-ring" href="#/projects" data-route="projects"><span>Projects</span></a></li>
+          <li><a class="nav__link focus-ring" href="#/about" data-route="about"><span>About</span></a></li>
+        </ul>
+        <button type="button" class="theme-toggle focus-ring" id="theme-toggle" aria-label="Toggle theme">
+          <span class="theme-toggle__icons" aria-hidden="true">
+            <svg class="theme-toggle__sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="4" /><path d="M12 2v2" /><path d="M12 20v2" /><path d="m4.93 4.93 1.41 1.41" /><path d="m17.66 17.66 1.41 1.41" /><path d="M2 12h2" /><path d="M20 12h2" /><path d="m6.34 17.66-1.41 1.41" /><path d="m19.07 4.93-1.41 1.41" />
+            </svg>
+            <svg class="theme-toggle__moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+            </svg>
+          </span>
+        </button>
+      </div>
+    </nav>
+
+    <main id="main-content" class="main" tabindex="-1">
+      <!-- ============================ HOME ============================ -->
+      <div class="view view--home" id="view-home" data-view="home" data-title="Home">
+        <section class="hero">
+          <div class="hero__inner">
+            <div class="hero__grid">
+              <div class="hero__copy fade-in">
+                <p class="hero__hello">Hey<span aria-hidden="true" class="hero__wave">👋</span>, I&rsquo;m Josh</p>
+                <h1 class="hero__title">
+                  <span>Design engineer &amp;</span>
+                  <span>AI enthusiast</span>
+                </h1>
+                <p class="hero__lead">
+                  Independent engineer focused on interfaces that feel calm, considered, and quietly fast.
+                </p>
+                <div class="cta-row">
+                  <button type="button" class="contact-btn focus-ring" data-contact-btn aria-label="Show email">
+                    <span class="contact-btn__face contact-btn__face--label">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2" /><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" /></svg>
+                      <span>Contact</span>
+                    </span>
+                    <span class="contact-btn__face contact-btn__face--email">
+                      <svg class="i-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2" /><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2" /></svg>
+                      <svg class="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg>
+                      <span data-email></span>
+                    </span>
+                  </button>
+                  <a href="#/projects" class="btn btn--outline btn--shadow focus-ring">
+                    View My Work
+                    <svg class="btn__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg>
+                  </a>
+                </div>
+              </div>
+
+              <div class="hero__portrait scale-unblur">
+                <div class="portrait-frame">
+                  <div class="portrait-frame__inner">
+                    <div class="portrait" id="portrait" role="img" aria-label="Josh portrait">
+                      <img class="portrait__img portrait__img--a" src="josh.webp" alt="" draggable="false" />
+                      <img class="portrait__img portrait__img--b" src="josh_wave.webp" alt="" draggable="false" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="projects" aria-labelledby="home-projects-title">
+          <div class="container">
+            <div class="section-head fade-in">
+              <h2 class="section-head__title section-head__title--lg" id="home-projects-title">My projects</h2>
+              <p class="section-head__lead">
+                From playful experiments to thoughtful systems, a look at the work I&rsquo;m proud to have shipped.
+              </p>
+            </div>
+            <div class="projects__grid" id="home-projects"></div>
+            <div class="projects__more">
+              <a href="#/projects" class="btn btn--outline btn--hover focus-ring">
+                View all projects
+                <svg class="btn__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <div data-contact-slot></div>
+        <div class="spacer"></div>
+      </div>
+
+      <!-- =========================== PROJECTS =========================== -->
+      <div class="view view--projects" id="view-projects" data-view="projects" data-title="Projects" hidden>
+        <section class="page-head">
+          <div class="fade-in page-head__inner">
+            <h1 class="section-head__title section-head__title--xl">My recent work</h1>
+            <p class="section-head__lead section-head__lead--lg">
+              Experiments, collaborations, and projects I&rsquo;m especially proud to have shipped.
+            </p>
+          </div>
+        </section>
+        <section class="projects">
+          <div class="container">
+            <div class="projects__grid" id="all-projects"></div>
+          </div>
+        </section>
+        <div data-contact-slot></div>
+        <div class="spacer"></div>
+      </div>
+
+      <!-- ============================ ABOUT ============================ -->
+      <div class="view view--about" id="view-about" data-view="about" data-title="About" hidden>
+        <section class="polaroid-section">
+          <div class="polaroid-strip" id="polaroid-strip">
+          </div>
+        </section>
+
+        <section class="about-card-section">
+          <div class="fade-in" style="--delay: 0.5s">
+            <div class="about-card">
+              <h1 class="about-card__title">Hello! I&rsquo;m <span>Josh Mercer</span>.</h1>
+              <div class="about-card__body">
+                <p>
+                  A <strong>product designer and frontend engineer</strong> passionate about building intuitive, human-centered digital experiences. With a background in <strong>visual craft</strong> and <strong>interaction design</strong>, I bring a unique blend of design thinking and technical execution to every project.
+                </p>
+                <p>
+                  My journey into design began when I realized how often good user experience was missing from powerful tools. That led me to embrace <strong>user-centered design</strong> as both a mindset and a craft, one that balances clarity, creativity, and functionality.
+                </p>
+                <p>
+                  Currently leading design at small product teams shipping software for <strong>creative professionals</strong>, I&rsquo;m always looking for opportunities to <strong>shape thoughtful interfaces and build scalable design systems</strong>.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="about-lists">
+          <div class="fade-in about-lists__inner" style="--delay: 0.1s">
+            <div class="block">
+              <h3 class="block__title">Experience</h3>
+              <div class="panel accordion" id="experience">
+                <div class="accordion__body" id="experience-body">
+                  <ul class="rows" id="experience-list"></ul>
+                </div>
+                <div class="accordion__fade" aria-hidden="true"></div>
+                <button type="button" class="accordion__toggle focus-ring" id="experience-toggle" aria-expanded="false">
+                  <span id="experience-toggle-label">Show more</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg>
+                </button>
+              </div>
+            </div>
+
+            <div class="block">
+              <h3 class="block__title">Education</h3>
+              <div class="panel">
+                <ul class="rows" id="education-list"></ul>
+              </div>
+            </div>
+
+            <div class="block">
+              <h3 class="block__title">What I do</h3>
+              <div class="panel">
+                <div class="skills" id="skills-list"></div>
+              </div>
+            </div>
+
+            <div class="block">
+              <h3 class="block__title">Stack</h3>
+              <div class="panel stack" id="stack">
+                <button type="button" class="stack__reset focus-ring" id="stack-reset" aria-label="Reset stack">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" /><path d="M3 3v5h5" /></svg>
+                </button>
+                <div class="stack__measure" id="stack-measure" aria-hidden="true"></div>
+                <div class="stack__arena" id="stack-arena"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div data-contact-slot></div>
+        <div class="spacer"></div>
+      </div>
+
+      <!-- ===================== SHARED CONTACT CARD =====================
+           Moved by script.js into the active view's [data-contact-slot] -->
+      <section class="contact" id="contact" aria-labelledby="contact-title">
+        <div class="fade-in">
+          <div class="contact__card">
+            <div class="contact__card-inner">
+              <div class="contact__shader" id="contact-shader" aria-hidden="true"></div>
+
+              <div class="contact__grid">
+                <div class="contact__copy">
+                  <h2 class="contact__title" id="contact-title">Let&rsquo;s connect</h2>
+                  <p class="contact__lead">
+                    I&rsquo;m always open to discussing new projects, creative ideas, or opportunities to be part of your visions. Just reach out!
+                  </p>
+                  <div class="cta-row">
+                    <button type="button" class="contact-btn focus-ring" data-contact-btn aria-label="Show email">
+                      <span class="contact-btn__face contact-btn__face--label">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2" /><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" /></svg>
+                        <span>Contact</span>
+                      </span>
+                      <span class="contact-btn__face contact-btn__face--email">
+                        <svg class="i-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2" /><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2" /></svg>
+                        <svg class="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg>
+                        <span data-email></span>
+                      </span>
+                    </button>
+                    <a href="#/projects" class="btn btn--outline btn--soft focus-ring">
+                      See projects
+                      <svg class="btn__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg>
+                    </a>
+                  </div>
+                </div>
+
+                <div class="contact__aside">
+                  <div class="socials">
+                    <a class="social focus-ring" data-mailto aria-label="Email" href="mailto:hello@example.com">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2" /><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" /></svg>
+                    </a>
+                    <a class="social focus-ring" data-social="linkedin" aria-label="LinkedIn" href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
+                      <svg viewBox="0 5 1036 990" fill="currentColor" aria-hidden="true"><path d="M0 120c0-33.334 11.667-60.834 35-82.5C58.333 15.833 88.667 5 126 5c36.667 0 66.333 10.666 89 32 23.333 22 35 50.666 35 86 0 32-11.333 58.666-34 80-23.333 22-54 33-92 33h-1c-36.667 0-66.333-11-89-33S0 153.333 0 120zm13 875V327h222v668H13zm345 0h222V622c0-23.334 2.667-41.334 8-54 9.333-22.667 23.5-41.834 42.5-57.5 19-15.667 42.833-23.5 71.5-23.5 74.667 0 112 50.333 112 151v357h222V612c0-98.667-23.333-173.5-70-224.5S857.667 311 781 311c-86 0-153 37-201 111v2h-1l1-2v-95H358c1.333 21.333 2 87.666 2 199 0 111.333-.667 267.666-2 469z" /></svg>
+                    </a>
+                    <a class="social focus-ring" data-social="x" aria-label="X" href="https://x.com" target="_blank" rel="noopener noreferrer">
+                      <svg viewBox="0 0 300 271" fill="currentColor" aria-hidden="true"><path d="m236 0h46l-101 115 118 156h-92.6l-72.5-94.8-83 94.8h-46l107-123-113-148h94.9l65.5 86.6zm-16.1 244h25.5l-165-218h-27.4z" /></svg>
+                    </a>
+                  </div>
+                  <div class="contact__legal">
+                    <p>2026 &copy; Built with HTML, CSS &amp; JS</p>
+                    <p>By Josh Mercer</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Libraries (optional enhancements; the site degrades gracefully without them) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.20.0/matter.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.3.4/dist/lenis.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
