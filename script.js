@@ -25,8 +25,8 @@
      ====================================================================== */
   var CONFIG = {
     siteName: "Portfolio",
-    email: "hello@example.com",
-    linkedin: "https://www.linkedin.com",
+    email: "mohanaviswa2005@gmail.com",
+    linkedin: "https://www.linkedin.com/in/vishwasridhar/",
     x: "https://x.com",
 
     /* Project imagery is mock-up only (sourced from Dribbble, credit to the
