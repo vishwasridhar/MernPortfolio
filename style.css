@@ -529,7 +529,16 @@ strong { font-weight: 600; }
   border: 1px solid var(--fg-10);
   background: var(--background);
 }
-.project-card__icon svg { width: 0.875rem; height: 0.875rem; }
+.project-card__icon { overflow: visible; }
+.project-card__icon svg {
+  display: block;
+  width: 1.125rem;
+  height: 1.125rem;
+  max-width: none;
+  flex-shrink: 0;
+  overflow: visible;
+  stroke-width: 1.8;
+}
 .project-card__brand { font-size: 0.875rem; font-weight: 500; letter-spacing: -0.025em; }
 .project-card__image {
   position: relative;
@@ -567,6 +576,62 @@ strong { font-weight: 600; }
   letter-spacing: -0.025em;
   color: var(--txt-50);
 }
+
+.project-card__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.625rem;
+  padding: 0 0.25rem 0.25rem;
+}
+.project-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  min-height: 2.5rem;
+  padding: 0.625rem 1rem;
+  border: 1px solid var(--fg-15);
+  border-radius: 0.75rem;
+  background: var(--background);
+  color: var(--foreground);
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.2;
+  transition: transform 0.25s var(--ease), background-color 0.25s, border-color 0.25s, opacity 0.25s;
+}
+.project-action:hover { transform: translateY(-2px); border-color: var(--accent); }
+.project-action--primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+.project-action--primary:hover { background: var(--accent-deep); border-color: var(--accent-deep); }
+.project-action.is-unavailable { opacity: 0.48; cursor: not-allowed; }
+.project-action.is-unavailable:hover { transform: none; }
+.project-card__image--placeholder {
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  background: radial-gradient(ellipse at 75% 75%, #8f002b 0%, transparent 48%), linear-gradient(135deg, #11121b 0%, #242033 55%, #101018 100%);
+}
+.project-card__placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.55rem;
+  width: min(82%, 28rem);
+  color: #fff;
+  letter-spacing: -0.04em;
+}
+.project-card__placeholder-kicker,
+.project-card__placeholder-caption {
+  font-size: clamp(0.55rem, 1.5vw, 0.75rem);
+  letter-spacing: 0.18em;
+  color: rgb(255 255 255 / 0.7);
+}
+.project-card__placeholder strong {
+  font-size: clamp(2rem, 7vw, 4.5rem);
+  line-height: 0.95;
+  font-weight: 700;
+}
+.project-card__placeholder-caption { margin-top: 0.35rem; }
 
 /* ---------- 9. About ---------- */
 .polaroid-section {
