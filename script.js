@@ -56,7 +56,7 @@
           "A sleek and intuitive tour booking website designed to provide users with a seamless experience for discovering and reserving travel experiences.",
         meta: "Frontend Development • Personal Project, 2026",
         ratio: 752 / 497,
-        image: "img\tour-booking-design.png",
+        image: "img/tour-booking-design.png",
         alt: "Tourbooking Design website preview",
         liveDemo: "https://vishwasridhar.github.io/Tour-Booking-Design/",
         github: "https://github.com/vishwasridhar/Tour-Booking-Design",
