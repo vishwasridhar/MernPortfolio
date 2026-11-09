@@ -40,7 +40,7 @@
           "A responsive digital-agency website concept designed and developed to showcase creative services through a bold visual identity, clear messaging, and polished interactions.",
         meta: "Frontend Development • Personal Project, 2026",
         ratio: 752 / 497,
-        image: "",
+        image: "img/pixelcraft-preview.jpeg",
         alt: "PixelCraft Digital agency website preview",
 
         liveDemo: "https://vishwasridhar.github.io/Pixel-craft-digital-agency/",
@@ -56,10 +56,10 @@
           "A sleek and intuitive tour booking website designed to provide users with a seamless experience for discovering and reserving travel experiences.",
         meta: "Frontend Development • Personal Project, 2026",
         ratio: 752 / 497,
-        image: "",
+        image: "img\tour-booking-design.png",
         alt: "Tourbooking Design website preview",
-        liveDemo: "",
-        github: "",
+        liveDemo: "https://vishwasridhar.github.io/Tour-Booking-Design/",
+        github: "https://github.com/vishwasridhar/Tour-Booking-Design",
       },
     ],
 
