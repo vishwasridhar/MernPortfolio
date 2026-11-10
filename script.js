@@ -68,46 +68,22 @@
 
     experience: [
       {
-        company: "Linear",
-        role: "Senior Design Engineer",
-        period: "Mar 2024 – Present",
-        slug: "linear",
+        company: "Bigzel Technologies",
+        role: "MERN Stack Developer Intern",
+        period: "Sep 2026 – Present",
+        slug: "bigzel",
       },
       {
-        company: "Vercel",
-        role: "Product Designer",
-        period: "Aug 2022 – Feb 2024",
-        slug: "vercel",
+        company: "CourseInn Academy",
+        role: "MERN Stack Development Training",
+        period: "Sep 2026 – present",
+        slug: "courseinn logo",
       },
       {
-        company: "Stripe",
-        role: "Design Engineer",
-        period: "Jun 2021 – Jul 2022",
-        slug: "stripe",
-      },
-      {
-        company: "Figma",
-        role: "UI Engineer",
-        period: "Sep 2019 – May 2021",
-        slug: "figma",
-      },
-      {
-        company: "Notion",
-        role: "Product Designer",
-        period: "Jan 2018 – Aug 2019",
-        slug: "notion",
-      },
-      {
-        company: "Airbnb",
-        role: "Design Intern",
-        period: "May 2017 – Dec 2017",
-        slug: "airbnb",
-      },
-      {
-        company: "Freelance",
-        role: "Designer & Developer",
-        period: "2015 – 2017",
-        brand: "#8F002B",
+        company: "St. Joseph's College of Engineering",
+        role: "Ethical Hacking Certification",
+        period: " May 2024 | 1 Week",
+        slug: "logo",
       },
     ],
 
@@ -1140,14 +1116,17 @@
   function initPolaroids() {
     var strip = $("#polaroid-strip");
     if (!strip) return;
-    var rotations = [-8, 6, -4, 7, -6, 5];
+    // Eight technology cards. Keep one rotation value for every card.
+    var rotations = [-8, 6, -4, 7, -6, 5, -3, 8];
     var mern = [
-      { label: "MongoDB", slug: "mongodb/47A248" },
-      { label: "Express", slug: "express/ffffff" },
-      { label: "React", slug: "react/61DAFB" },
-      { label: "Node.js", slug: "nodedotjs/5FA04E" },
+      { label: "HTML5", slug: "html5/E34F26" },
+      { label: "CSS3", slug: "css3/1572B6" },
       { label: "JavaScript", slug: "javascript/F7DF1E" },
-      { label: "GitHub", slug: "github/ffffff" },
+      { label: "React", slug: "react/61DAFB" },
+      { label: "Express.js", slug: "express/000000" },
+      { label: "Node.js", slug: "nodedotjs/339933" },
+      { label: "MongoDB", slug: "mongodb/47A248" },
+      { label: "Git", slug: "git/F05032" },
     ];
     strip.innerHTML = rotations
       .map(function (rot, i) {
