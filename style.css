@@ -1012,8 +1012,10 @@ strong {
   border: 1px solid var(--fg-15);
 }
 .row__logo img {
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 100%;
+  height: 100%;
+  padding: 4px;
+  object-fit: contain;
 }
 .row__initial {
   font-size: 18px;

@@ -71,50 +71,51 @@
         company: "Bigzel Technologies",
         role: "MERN Stack Developer Intern",
         period: "Sep 2026 – Present",
-        slug: "bigzel",
+        image: "img/bigziel_logo.jfif",
       },
       {
         company: "CourseInn Academy",
         role: "MERN Stack Development Training",
-        period: "Sep 2026 – present",
-        slug: "courseinn logo",
+        period: "Sep 2026 – Present",
+        image: "img/logo.jpg",
       },
       {
         company: "St. Joseph's College of Engineering",
         role: "Ethical Hacking Certification",
-        period: " May 2024 | 1 Week",
-        slug: "logo",
+        period: "May 2024 · 1 Week",
+        image: "img/clg_logo.png",
       },
     ],
 
     education: [
       {
-        school: "Rhode Island School of Design",
-        degree: "BFA, Graphic Design",
-        period: "2013 – 2017",
+        school: "Apollo Arts & Science College",
+        degree: "Bachelor of Computer Applications (BCA)",
+        period: "2023 – 2026",
       },
       {
-        school: "Stanford University",
-        degree: "HCI Certificate, d.school",
-        period: "2018",
+        school: "V.O.C Vidiyalayaa Matriculation Higher Secondary School",
+        degree: "12th Standard",
+        period: "2023",
       },
       {
-        school: "Bruno Simon's Three.js Journey",
-        degree: "WebGL & Shaders",
-        period: "2022",
+        school: "V.O.C Vidiyalayaa Matriculation Higher Secondary School",
+        degree: "10th Standard",
+        period: "2021",
       },
     ],
 
     skills: [
-      "UI/UX Design",
-      "Design Systems",
-      "Prototyping & Motion",
       "Frontend Development",
-      "TypeScript & React",
-      "Interaction Design",
-      "Performance Tuning",
-      "Accessibility",
-      "Visual Identity",
+      "Responsive Design",
+      "HTML5 & CSS3",
+      "Javascript",
+      "Bootstrap & Sass",
+      "React.js (Learning)",
+      "Node.js & Express.js (Learning)",
+      "MongoDB (Learning)",
+      "Git & GitHub (Learning)",
+      "Full-Stack Development (Learning)",
     ],
 
     stack: [
@@ -125,14 +126,16 @@
         fg: "#ffffff",
         iconUrl: "https://svgl.app/library/figma.svg",
       },
+      { label: "Html5", slug: "html5", bg: "#8F002B", fg: "#ffffff" },
+      { label: "Css3", slug: "css", bg: "#1a1a1a", fg: "#ffffff" },
+      { label: "JavaScript", slug: "javascript", bg: "#1a1a1a", fg: "#ffffff" },
+      { label: "Bootstrap", slug: "bootstrap", bg: "#1a1a1a", fg: "#ffffff" },
+      { label: "Sass", slug: "sass", bg: "#1a1a1a", fg: "#ffffff" },
       { label: "React", slug: "react", bg: "#8F002B", fg: "#ffffff" },
-      { label: "Next.js", slug: "nextdotjs", bg: "#1a1a1a", fg: "#ffffff" },
-      { label: "TypeScript", slug: "typescript", bg: "#1a1a1a", fg: "#ffffff" },
-      { label: "shadcn/ui", slug: "shadcnui", bg: "#1a1a1a", fg: "#ffffff" },
-      { label: "Cursor", slug: "cursor", bg: "#1a1a1a", fg: "#ffffff" },
-      { label: "GSAP", slug: "gsap", bg: "#8F002B", fg: "#ffffff" },
-      { label: "GitHub", slug: "github", bg: "#1a1a1a", fg: "#ffffff" },
-      { label: "Vercel", slug: "vercel", bg: "#1a1a1a", fg: "#ffffff" },
+      { label: "Node.js", slug: "nodedotjs", bg: "#1a1a1a", fg: "#ffffff" },
+      { label: "Express.js", slug: "express", bg: "#1a1a1a", fg: "#ffffff" },
+      { label: "MongoDB", slug: "mongodb", bg: "#1a1a1a", fg: "#ffffff" },
+      { label: "Git", slug: "git", bg: "#1a1a1a", fg: "#ffffff" },
       {
         label: "Tailwind CSS",
         slug: "tailwindcss",
@@ -812,8 +815,20 @@
   }
 
   function logoHtml(entry, name, mode) {
-    // mode: "brand" (white tile w/ simple-icons logo) | "plain" (bordered initial)
+    // Prefer the supplied company / institution logo image when available.
+    // Keep the initial-letter fallback in case an image cannot be loaded.
     var initial = esc(name.charAt(0));
+    if (entry.image) {
+      return (
+        '<span class="row__logo row__logo--brand" aria-hidden="true">' +
+        '<img src="' +
+        esc(entry.image) +
+        '" alt="" width="48" height="48" draggable="false" data-initial="' +
+        initial +
+        '" />' +
+        "</span>"
+      );
+    }
     if (entry.slug) {
       return (
         '<span class="row__logo row__logo--brand" aria-hidden="true">' +
@@ -1123,7 +1138,7 @@
       { label: "CSS3", slug: "css3/1572B6" },
       { label: "JavaScript", slug: "javascript/F7DF1E" },
       { label: "React", slug: "react/61DAFB" },
-      { label: "Express.js", slug: "express/000000" },
+      { label: "Express.js", slug: "express/ffffff" },
       { label: "Node.js", slug: "nodedotjs/339933" },
       { label: "MongoDB", slug: "mongodb/47A248" },
       { label: "Git", slug: "git/F05032" },
